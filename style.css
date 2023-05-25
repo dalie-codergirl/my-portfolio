@@ -10,7 +10,18 @@ header{
         width: 100%;
         margin: 0px;
         padding: 0px;
+        background-color: pink;
+        font-size: 24;
     
+    
+    }
+    error{
+        color: red;
+    }
+    button{
+        color: rgb(26, 25, 25);
+        width: auto;
+
     }
     footer{
         color: white;
@@ -35,14 +46,18 @@ header{
         font-weight: bolder;
         font-family: arial;
     }
-    div{
-       padding-left: 50;
-     
+
+    form{
+        color: rgb(8, 8, 8);
+        border-style:double;
+        background-color: blanchedalmond;
+        height: 1000;
+        width: 500;
     }
-    div form{
-        background-color: aqua;
-        border-style: dashed;
-        border-radius: 50;
+    w{
+        font-weight: bolder;
+        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
     }
     
     h3{
@@ -68,6 +83,8 @@ header{
     }
     img{
         padding: 5px;
+        border-radius: 20px;
+        border-inline-color: black;
     }
     a{
         text-decoration: none;
