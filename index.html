@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="myScript.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>DALITSO</title>
 </head>
     <header>
-        <nav >
-            <ul>
-            <li><a href="about.html"><d>ABOUT ME</d></a></li>
-            <li><a href="contacts.html"><d>CONTACTS</d></a></li>
+        <nav  >
+            <ul class="nav-ul" id="nav-ul">
+            <li><a href="#about"><d>ABOUT ME</d></a></li>
+            <li><a href="#contacts"><d>CONTACTS</d></a></li>
+            <li><a href="#projects"><d>PROJECTS</d></a></li>
+            <li><a href="#skills"><d>SKILLS</d></a></li>
 
           </ul>
         </nav>
-    
+   
         <h2>DALITSO MBICHOLO</h2>
     </header>
-    
+    <img name="slide" width="600" height="400">
 <body>
-        <h1> ABOUT ME</h1>
+    <div id="error"></div>
+    <form id="form" action"/" method="get">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="text" required>
+        </div>  
+        <button type="submit">Submit</button>
+    </form>
+        <h1 id="about"> ABOUT ME</h1>
+    
         <img src="images/dali.jpg" alt="profile picture"><br>
         <p>~My name is dalitso mbicholo a student at mzuzu university currently studying ICT, a programmer in making. I am a malawian  young lady aged 18 currently residing in lilongwe. I am acquited with some of the programming languages like c programming and currently learning java, i also have knowledge about graphics and designing, pc repairing. I am more knowlegdeable in microsoft office and more interested in networking, i did my computer repairing at NTHA foundation where we were taught how one can maintain he's/her computer, we also learnt some basic graphics and designing and how to play well with the adobe suit. </p>
         <p>~I am one of the founders and a COO of a company called smart solution, it is an electronics company where we offer the following services: CCTV installation, nertworking,graphic and web designing, electriv fencing, IP PABX system,gate or garage automation and video conferencing solutions.This is why in my own free time i am a fleerance designer and a bussiness woman in a sense that i sell limited edition clothes </p>
         <img src="images/SS.png" alt="SMART SOLUTIONS">
         <br>
-      <i><p> FEATURED PROJECTS</p></i>
+      <i><p id="projects"> FEATURED PROJECTS</p></i>
         <p>~Below are some projects of which i featured in.</p><br>
         <p>~In 2020 when i was in form 3 i took part in a school project where we created a solar cooker. It used solar energy to heat up the oven and therefore creatin necessary amount of temperature to heat up the food.  </p>
         <img src="images/cooker.png"  alt="solar cooker">
@@ -31,7 +47,7 @@
         <img src="images/oven.png"  alt="solar heater"><br>
         <br>
         <a href="http://www.scienceduddies.com"><t>Click here to view the project details.</a></t>
-        <h3> SKILLS </h3>
+        <h3 id="skills"> SKILLS </h3>
         <P>~With the knowledge i have on designing and programming i can say that i have the following skills.</P> 
         <li> Graphics and designing</li>
         <li> Web design </li>
@@ -43,7 +59,7 @@
         <a href="skills.html"><t>View more....</a></t>
     </body>
     <footer>
-        <h3>MY CONTACTS</h3>
+        <h3 id="contacts">MY CONTACTS</h3>
         <h3><img src="images/call.png" width="30px">0997351383</h3> 
         <br>
         <h3><img src="images/msg .png" width="30px">dalitsombhicholo@gmail.com </h3>
