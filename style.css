@@ -10,17 +10,20 @@ header{
         width: 100%;
         margin: 0px;
         padding: 0px;
-        background-color: pink;
+        background-color:  rgb(54, 124, 124);
         font-size: 24;
     
     
     }
-    error{
-        color: red;
-    }
+
+    
     button{
         color: rgb(26, 25, 25);
-        width: auto;
+        width: 30;
+        height: 50;
+        background-color:rgb(213, 216, 213);
+        border-style: solid;
+
 
     }
     footer{
@@ -49,15 +52,37 @@ header{
 
     form{
         color: rgb(8, 8, 8);
-        border-style:double;
-        background-color: blanchedalmond;
         height: 1000;
         width: 500;
+        border-radius: 30px;
+      margin: 0;
+      padding-left: 40px;
+      border-width: 50px;
+    }
+  
+    m{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bolder;
     }
     w{
         font-weight: bolder;
         font-size: large;
         font-family: 'Times New Roman', Times, serif;
+        border-radius: 30;
+        height: 60px;
+    }
+    #para2{
+      color: white;
+      font-size: 2.5em;
+      background: linear-gradient(-240deg,rgb(54, 124, 124) 70%, rgb(3, 54, 57) );
+      padding: 1.3em;
+      border-radius: 0.4em;
+      box-shadow: 0 1.3em 1.8em rgb(3, 54, 57);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      word-spacing: 0.4em;
+      letter-spacing: 0.2em;
+      text-align: center;
     }
     
     h3{
@@ -69,7 +94,7 @@ header{
     h1 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         padding: 5px;
-        color: rgb(22, 21, 21);
+        color: white;
     }
     h2 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -78,7 +103,7 @@ header{
     }
     p {
         font-family: Arial, Helvetica, sans-serif;
-        color: rgb(2, 2, 2);
+        color: rgb(24, 23, 23);
         font-weight: lighter;
     }
     img{
@@ -109,3 +134,5 @@ header{
         font-weight: bolder;
         font-size: 20px;
       }
+
+      
