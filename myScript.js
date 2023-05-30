@@ -34,7 +34,26 @@ function changeImg(){
 }
 window.onload= changeImg;
 
-//getting elements throught their Id's.
+
+
+window.addEventListener('DOMContentLoaded', function()
+{
+    var greetingElement = this.document.getElementById('greeting');
+    var today = new Date();
+    var hour = today.getHours();
+     var greeting;
+     if(hour<12){
+        greeting= 'GOOD MORNING!! AND WELCOME TO MY PORTFOLIO';
+     }else if(hour< 18){
+        greeting=' GOOD AFTERNOON!!  AND WELCOME TO MY PORTFOLIO';
+     }else{
+        greeting='GOOD EVENING!!  AND WELCOME TO MY PORTFOLIO';
+     }
+     greetingElement.textContent = greeting;
+});
+
+
+
 const name= document.getElementById('name')
 const password= document.getElementById('password')
 const form= document.getElementById('form')
@@ -52,28 +71,7 @@ form.addEventListener ;'submit',(e)=>{
         e.preventDefault()
         errorElement.innerText= Messages.join(',')
     }
-}//this code creates a validation form.
-
-
-document.addEventListener("DOMContentLoaded", function()
-{
-    var currentDate = new Date();
-    var currentHour =currentDate.getHours();
-    var greeting;
-    if(currentHour >= 0 && currentHour <=12){
-        greeting ="GOOD MORNING!!";
-    } else if(currentHour >= 12 && currentHour <= 18){
-        greeting= "GOOD AFTERNOON!!";
-    } else {
-        greeting ="GOOD EVENING!!";
-    }
-    var greetings = document.getElementById("para1");
-    greetings.textContent = greeting;
-});
-
-
-
-
+}
 
 //Design for my projects page
 //Filtering mechanism for projects
