@@ -55,13 +55,11 @@ form.addEventListener ;'submit',(e)=>{
 }//this code creates a validation form.
 
 
-//Greeting feature
 document.addEventListener("DOMContentLoaded", function()
 {
     var currentDate = new Date();
     var currentHour =currentDate.getHours();
-    // var greeting;
-    currentHour = 12;
+    var greeting;
     if(currentHour >= 0 && currentHour <=12){
         greeting ="GOOD MORNING!!";
     } else if(currentHour >= 12 && currentHour <= 18){
@@ -69,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function()
     } else {
         greeting ="GOOD EVENING!!";
     }
-    var greetings = document.getElementById("para2");
+    var greetings = document.getElementById("para1");
     greetings.textContent = greeting;
 });
 
@@ -118,7 +116,21 @@ function doSearch(){
   })
 }
 
-    
+const skills = document.querySelectorAll('.skill');
+
+skills.forEach(skill => {
+
+    const tooltipText = skill.dataset.tooltip;
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.textContent = tooltipText;
+    skill.addEventListener('mouseout', () =>{
+        tooltip.style.visibility = 'visible';
+    });
+    skill.addEventListener('mouseout', () =>{
+        tooltip.style.visibility = 'hidden';
+    });
+});
       
 
        
