@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function()
 {
     var currentDate = new Date();
     var currentHour =currentDate.getHours();
-    var greeting;
+    // var greeting;
     currentHour = 12;
     if(currentHour >= 0 && currentHour <=12){
         greeting ="GOOD MORNING!!";
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 
-    //Design for my projects page
+//Design for my projects page
 //Filtering mechanism for projects
 function filterProjects(){
   var itemList = document.getElementById("itemList");

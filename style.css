@@ -12,8 +12,6 @@ header{
         padding: 0px;
         background-color:  rgb(54, 124, 124);
         font-size: 24;
-    
-    
     }
 
     
@@ -23,9 +21,8 @@ header{
         height: 50;
         background-color:rgb(213, 216, 213);
         border-style: solid;
-
-
     }
+    
     footer{
         color: white;
         background-color: rgb(54, 124, 124);
@@ -134,5 +131,15 @@ header{
         font-weight: bolder;
         font-size: 20px;
       }
-
-      
+progress{
+    width: 1000px;
+    height: 20px;
+}
+progress::-webkit-progress-bar{
+    background-color: #476445;
+    border-radius: 5px;
+}
+progress::-webkit-progress-value{
+    background-color: #00ff15;
+    border-radius: 5px;
+}
