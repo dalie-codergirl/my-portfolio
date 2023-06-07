@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include 'connection.php';?>
 <head>
     <link rel="stylesheet" href="style.css">
 <title>PROJECTS</title>
@@ -6,9 +7,9 @@
 <header>
     <nav >
         <ul>
-        <li><a href="index.html"><d>HOME</d></a></li>
-        <li><a href="contacts.html"><d>CONTACT</d></a></li>
-        <li><a href="about.html"><d>ABOUT ME</d></a></li>
+        <li><a href="index.php"><d>HOME</d></a></li>
+        <li><a href="contacts.php"><d>CONTACT</d></a></li>
+        <li><a href="about.php"><d>ABOUT ME</d></a></li>
       </ul>
     </nav>
 </header>

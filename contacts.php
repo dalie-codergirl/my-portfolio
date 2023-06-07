@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include 'connection.php';?>
 <head>
     <link rel="stylesheet" href="style.css">
 <title>CONTACTS </title>
@@ -6,16 +7,17 @@
 <header>
     <nav >
         <ul>
-        <li><a href="index.html"><d>HOME</d></a></li>
-        <li><a href="about.html"><d>ABOUT ME</d></a></li>
-        <li><a href="projects.html"><d>PROJECT</d></a></li>
+        <li><a href="index.php"><d>HOME</d></a></li>
+        <li><a href="about.php"><d>ABOUT ME</d></a></li>
+        <li><a href="projects.php"><d>PROJECT</d></a></li>
       </ul>
     </nav>
 
     <h2>DALITSO MBICHOLO</h2>
 </header>
 <body>
-   
+    <div id="location"></div>
+    
 <h3>Phone:0997351383 <br>
 email:dalitsombhicholo@gmail.com <br>
 </h3>
@@ -36,6 +38,7 @@ email:dalitsombhicholo@gmail.com <br>
         </div>  
         <button type="submit" size="30">Submit</button>
     </form>
+ 
 </body>
 <footer>
     <h3>MY CONTACTS</h3>

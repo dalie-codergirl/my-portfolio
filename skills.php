@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include 'connection.php';?>
 <head>
     <link rel="stylesheet" href="style.css">
 <title>ABOUT ME</title>
@@ -6,15 +7,15 @@
 <header>
     <nav >
         <ul>
-        <li><a href="index.html"><d>HOME</d></a></li>
-        <li><a href="contacts.html"><d>CONTACT</d></a></li>
-        <li><a href="about.html"><d>ABOUT ME</d></a></li>
-        <li><a href="projects.html"><d>PROJECT</d></a></li>
+        <li><a href="index.php"><d>HOME</d></a></li>
+        <li><a href="contacts.php"><d>CONTACT</d></a></li>
+        <li><a href="about.php"><d>ABOUT ME</d></a></li>
+        <li><a href="projects.php"><d>PROJECT</d></a></li>
       </ul>
     </nav>
 </header>
 <body>
-
+<div class="my-element"></div>
     <br>
     <dt id="skill" class="skills" > GRAPHICS AND DESIGNING </dt><br>
     <p> ~ I  am well educated on how to design things for example posters, wedding card and birthday cards. I mostly got my designing knowledge at the university through a course known as multimedia where we were taught the basic foundations of some authoring tools used in desgining for example adobe photoshop where you can edit photos.</p>
@@ -40,6 +41,14 @@
 <br><br>
 <dt id="skill"  class="skills">  COMMUNICATION</dt><br>
 <p>~ I am a very good communicator and speak very good english, i know some of the languages for example french,shona,zulu and lambia</p>
+Graphics and design<br>
+<progress value="100" max="100"></progress>
+<br>
+web design<br>
+<progress value="70" max="100"></progress>
+<br>
+front end development<br>
+<progress value="100" max="100"></progress>
 
 <footer>
     <h3>MY CONTACTS</h3>

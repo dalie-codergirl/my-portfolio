@@ -1,3 +1,16 @@
+<?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "my_portfolio";
+        $connection = mysqli_connect($servername,$username,$password,$dbname);
+        if(!$connection){
+            echo "no connection";
+        }else{
+            echo "connected succefully";
+        }
+        ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +56,7 @@
         <a href="http://www.scienceduddies.com"><t>Click here to view the project details.</a></t>
         <br>
     
-        <a href="projects.html"><t>FOR MORE INFO....</t> </a>  
+        <a href="projects.php"><t>FOR MORE INFO....</t> </a>  
         
 
         <h3 id="skills"> SKILLS </h3>
@@ -55,7 +68,7 @@
         <li> Front end development</li>
         <li> Bussines </li>
         <li> Communication</li>
-        <a href="skills.html"><t>VIEW MORE....</t></a>
+        <a href="skills.php"><t>VIEW MORE....</t></a>
     
          
 
@@ -76,7 +89,7 @@
         </div>  
         <button type="submit" size="30">Submit</button>
     </form>
-        
+       
     </body>
 
 

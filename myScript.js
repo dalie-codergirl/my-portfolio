@@ -129,6 +129,28 @@ skills.forEach(skill => {
         tooltip.style.visibility = 'hidden';
     });
 });
-      
+   //not working geolocation  
+document.addEventListener('DOMContentLoaded', function(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }else{
+        showError("Geolocation is not supported by this browser.");
+    }
+});
+function showPosition(position){
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
-       
+    var locationElement = document.getElementById("location");
+    locationElement.innerHTML = "Latitude:" + latitude + "<br>Longitude:" + longitude;
+}
+function showError(error){
+    var locationElement = document.getElementById("location");
+    locationElement.innerHTML = "Error:" + error;
+}
+ 
+//animation
+document.addEventListener('DOMContentLoaded', function(){
+    var element = document.querySelector('.my-element');
+    element.classList.add('animated');
+});
