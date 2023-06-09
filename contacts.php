@@ -16,12 +16,44 @@
     <h2>DALITSO MBICHOLO</h2>
 </header>
 <body>
-    <div id="location"></div>
-    
-<h3>Phone:0997351383 <br>
-email:dalitsombhicholo@gmail.com <br>
-</h3>
-<h3> FORM </h3>
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $number = $_POST["number"];
+    $email = $_POST["email"];
+
+    $sql = "INSERT INTO contacts (Name, Number, email) VALUES ('$name', '$number', '$email')";
+
+    if ($connection->query($sql) === TRUE) {
+        echo "<p class='message success'>Data saved successfully!</p>";
+    } else {
+        echo "<p class='message error'>Error: " . $sql . "<br>" . $connection->error . "</p>";
+    }
+
+    $connection->close();
+}
+
+?>
+
+<br>
+<h3> For further discussions </h3>
+<div class="container">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <label for="fname">Name</label><br>
+            <input type="text" id="fname" name="name" placeholder="Your name.." required><br>
+
+            <label for="number">Phone Number</label><br>
+            <input type="text" id="number" name="number" placeholder="Your number..." required><br>
+
+            <label for="email">Email Address</label><br>
+            <input type="text" id="email" name="email" placeholder="Your email address..." required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+<!-- <h3> FORM </h3>
         <p>Fill out the form below.</p>
     <form id="form" action"/" method="get">
         <div>
@@ -37,7 +69,7 @@ email:dalitsombhicholo@gmail.com <br>
             <input id="email" name="email" size="90" row="5"  type="text" required><br>
         </div>  
         <button type="submit" size="30">Submit</button>
-    </form>
+    </form> -->
  
 </body>
 <footer>

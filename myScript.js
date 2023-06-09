@@ -154,3 +154,20 @@ document.addEventListener('DOMContentLoaded', function(){
     var element = document.querySelector('.my-element');
     element.classList.add('animated');
 });
+
+document.querySelector("form").addEventListener("submit", function(event) {
+    var inputs = this.querySelectorAll("input[type='text']");
+    var isValid = true;
+
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === "") {
+            isValid = false;
+            break;
+        }
+    }
+
+    if (!isValid) {
+        event.preventDefault();
+        alert("Please fill in all fields.");
+    }
+});

@@ -14,39 +14,27 @@
     </nav>
 </header>
 <body>
-    <h3> PROJECTS</h3>
-    <input type="text" id="searchBar" placeholder="Search...." size="60">
-  <button id="SearchButton" onclick="doSearch()">Search</button><br>
+<?php
+$query="SELECT Id ,Name, description FROM projects";
+$result= mysqli_query($connection,$query);
 
-   
+if(!$result){
+  die("Error:".mysqli_error($connection));
+}
+  ?>
+<div>
+<?php while($row = mysqli_fetch_assoc($result)) {?>
+<div>
+<h2><?php echo $row['Name'];?></h2>
+<p><?php echo $row['description'];?></p>
+</div>
+<?php } ?>
+</div>
 
-    <input type="checkbox" id="filterA" onclick="filterProjects()">
-    <label for="filterA">Filter 1</label>
-    <input type="checkbox" id="filterB" onclick="filterProjects()">
-    <label for="filterB">Filter 2</label>
-      <dl id="itemList">
-
-      <dt data-filter ="A"></dt>
-
-    <section id="section1">
- <h3>SOLAR COOKER</h3>
-    <p>~In 2020 when i was in form 3 i took part in a school project where we created a solar cooker. It used solar energy to heat up the oven and therefore creatin necessary amount of temperature to heat up the food.  </p>
-    <img src="images/cooker.png"  alt="solar cooker"><br>
-</section>
-
-<section id="section2">
-    <dt data-filter ="B"></dt>
-    <h3>SOLAR HEATER</h3>
-    <p>~In 2022 during my form 4 we had a competition we other secondary schools, i also took part in a project where we created a heater we using some basic handmade materials to come up with the project.</p>
-    <img src="images/oven.png"  alt="solar heater"><br>
-    <a href="http://www.scienceduddies.com"><t>Click here to view the project details.</a></t><br>
-</section>
-solar cooker<br>
-<progress value="70" max="100"></progress>
-<br>
-solar heater<br>
-<progress value="100" max="100"></progress>
-
+<?php
+mysqli_free_result($result);
+mysqli_close($connection);
+?>
 <footer>
     <h3>MY CONTACTS</h3>
     <h3><img src="images/call.png" width="30px">0997351383</h3> 
