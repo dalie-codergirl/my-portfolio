@@ -45,6 +45,7 @@ web design<br>
 front end development<br>
 <progress value="100" max="100"></progress>
 
+
 <footer>
     <h3>MY CONTACTS</h3>
     <h3><img src="images/call.png" width="30px">0997351383</h3> 
@@ -58,5 +59,6 @@ front end development<br>
     <li><a href="https://www.telegram.com"><img src="images/tel.png "width="30px"></a></li>
 </ul>
 </footer>
+
 </body>
 </html>

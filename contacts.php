@@ -24,6 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $number = $_POST["number"];
     $email = $_POST["email"];
 
+
+    $sql = "SELECT* FROM contacts WHERE number = '$number' AND email = '$email' ";
+    $answer =  $connection ->query($sql);
+    if ($answer->num_rows >0){
+        echo "the user already exist in database";
+    }else{
     $sql = "INSERT INTO contacts (Name, Number, email) VALUES ('$name', '$number', '$email')";
 
     if ($connection->query($sql) === TRUE) {
@@ -31,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<p class='message error'>Error: " . $sql . "<br>" . $connection->error . "</p>";
     }
-
+    }
     $connection->close();
 }
 
@@ -53,23 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Submit">
         </form>
     </div>
-<!-- <h3> FORM </h3>
-        <p>Fill out the form below.</p>
-    <form id="form" action"/" method="get">
-        <div>
-            <label for="name"><w>Name</w></label><br>
-            <input id="name" name="name" size="90"    type="text" required><br>
-        </div>
-        <div>
-        <label for="password"><w>Password</w></label><br>
-        <input id="password" name="password"  size="90" type="text" required><br>
-    </div>
-        <div>
-            <label for="email"><m>EMAIL</m></label><br>
-            <input id="email" name="email" size="90" row="5"  type="text" required><br>
-        </div>  
-        <button type="submit" size="30">Submit</button>
-    </form> -->
+
  
 </body>
 <footer>

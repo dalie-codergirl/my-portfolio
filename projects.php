@@ -14,6 +14,19 @@
     </nav>
 </header>
 <body>
+
+
+<div class="row">
+  <div class="column">
+    <img src="images/oven.png" style="width:80%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/cooker.png" style="width:80%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/GUI.png" style="width:80%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+ 
 <?php
 $query="SELECT Id ,Name, description FROM projects";
 $result= mysqli_query($connection,$query);

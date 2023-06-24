@@ -71,23 +71,46 @@
         <a href="skills.php"><t>VIEW MORE....</t></a>
     
          
+        <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $number = $_POST["number"];
+    $email = $_POST["email"];
 
+    $sql = "SELECT* FROM contacts WHERE number = '$number' AND email = '$email' ";
+    $answer =  $connection ->query($sql);
+    if ($answer->num_rows >0){
+        echo "the user already exist in database";
+    }else{
+    // inserting attributes into a contact table in the database and creating a connection between the database and the form dowwnwards 
+    $sql = "INSERT INTO contacts (name, number, email) VALUES ('$name', '$number', '$email')";
+
+    if ($connection->query($sql) === TRUE) {
+        echo "<p class='message success'>Data saved successfully!</p>";
+    } else {
+        echo "<p class='message error'>Error: " . $sql . "<br>" . $connection->error . "</p>";
+    }
+    }
+    $connection->close();
+}
+
+?>
         <h3> FORM </h3>
         <p>Fill out the form below.</p>
-    <form id="form" action"/" method="get">
+    <form  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="form" action"/" method="get">
         <div>
             <label for="name"><w>Name</w></label><br>
             <input id="name" name="name" size="90"    type="text" required><br>
         </div>
         <div>
-        <label for="password"><w>Password</w></label><br>
-        <input id="password" name="password"  size="90" type="text" required><br>
+        <label for="Number"><w>Number</w></label><br>
+        <input id="number" name="number"  size="90" type="text" required><br>
     </div>
         <div>
-            <label for="email"><m>EMAIL</m></label><br>
+            <label for="email"><w>Email</w></label><br>
             <input id="email" name="email" size="90" row="5"  type="text" required><br>
         </div>  
-        <button type="submit" size="30">Submit</button>
+        <button type="submit">Submit</button>
     </form>
        
     </body>

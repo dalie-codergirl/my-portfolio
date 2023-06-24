@@ -1,3 +1,4 @@
+// this code creates a smooth scroller in our page.
 const links = document.querySelectorAll(".nav-ul a")
 for(const link of links){
     link.addEventListener("click", smoothScroll);
@@ -12,7 +13,7 @@ function smoothScroll(e){
 }
 
 
-// this code creates a smooth scroller in our page.
+// this code creates a slideshow on the home page
 
 var i = 0;
 var images = [];
@@ -34,7 +35,7 @@ function changeImg(){
 }
 window.onload= changeImg;
 
-
+// this code creates a dynamic greeting
 
 window.addEventListener('DOMContentLoaded', function()
 {
@@ -53,28 +54,8 @@ window.addEventListener('DOMContentLoaded', function()
 });
 
 
-
-const name= document.getElementById('name')
-const password= document.getElementById('password')
-const form= document.getElementById('form')
-const errorElement= document.getElementById('error')
-form.addEventListener ;'submit',(e)=>{
-    e.preventDefault()
-    let messages=[]
-    if(name.value ==='' || name.value == null){
-        messages.push('name is required')
-    }
-    if(password.value.length <=6){
-        messages.push('password must be longer than 6 characters')
-    }
-    if(messages.length>0){
-        e.preventDefault()
-        errorElement.innerText= Messages.join(',')
-    }
-}
-
 //Design for my projects page
-//Filtering mechanism for projects
+//Filtering mechanism for projects but doesntwork
 function filterProjects(){
   var itemList = document.getElementById("itemList");
   var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
@@ -95,7 +76,7 @@ function filterProjects(){
       }
    }
 } 
-//Search feature
+//Search feature but not so pleasant.
 const SearchInput =document.getElementById("SearchBar");
 const SearchButton =document.getElementById("SearchButton");
 
@@ -113,7 +94,7 @@ function doSearch(){
       }
   })
 }
-
+// tooltip function doesnt work
 const skills = document.querySelectorAll('.skill');
 
 skills.forEach(skill => {
@@ -149,12 +130,8 @@ function showError(error){
     locationElement.innerHTML = "Error:" + error;
 }
  
-//animation
-document.addEventListener('DOMContentLoaded', function(){
-    var element = document.querySelector('.my-element');
-    element.classList.add('animated');
-});
 
+// form validation working
 document.querySelector("form").addEventListener("submit", function(event) {
     var inputs = this.querySelectorAll("input[type='text']");
     var isValid = true;
@@ -171,3 +148,24 @@ document.querySelector("form").addEventListener("submit", function(event) {
         alert("Please fill in all fields.");
     }
 });
+
+
+// eeeish stuff sitikutsata mwene
+
+  function updateProgressBar(){
+    var progressBar=document.getElementById("progress-bar");
+    var progress=0;
+    var intervalId=setInterval(frame, 10);
+
+    function frame(){
+        if (progress >=45){
+            clearinterval(intervalid);
+            
+        }
+        else{
+            progress++;
+            progressBar.style.width=progress +"%";
+        }
+    }
+
+}
